@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "eslint.workingDirectories": ["./packages/web", "./packages/api"],
+  "remote.containers.workspaceMountConsistency": "cached"
+}
