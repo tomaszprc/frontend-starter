@@ -42,8 +42,7 @@ export class PostController {
 
   @Post()
   createPost(@Body() postDto: PostType): PostType {
-    const postId = posts[posts.length - 1].id + 1 || 0;
-    console.log(postDto);
+    const postId = posts.length ? posts[posts.length - 1].id + 1 : 0;
     const postObject = {
       id: postId,
       name: postDto.name,
@@ -55,7 +54,7 @@ export class PostController {
     return postObject;
   }
 
-  @Put(':id')
+  @Put()
   updateTask(@Body() postDto: UpdatePostDto): PostType {
     const post = posts.find((task) => task.id == postDto.id);
     post.name = postDto.name;

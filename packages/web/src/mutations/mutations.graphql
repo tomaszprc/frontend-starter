@@ -1,0 +1,17 @@
+mutation addTask($task: CreateTask!) {
+  addTask(task: $task) {
+    id
+  }
+}
+
+mutation deleteTask($id: Int!) {
+  deleteTask(id: $id) {
+    id
+  }
+}
+
+mutation updateTask($task: UpdateTask!) {
+  updateTask(task: $task) {
+    id
+  }
+}
